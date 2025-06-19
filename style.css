@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f8fc;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  margin-top: 90px;
+}
+
+h1 {
+  color: #2563eb;
+  margin-bottom: 30px;
+}
+
+#popup-btn {
+  padding: 12px 28px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.12em;
+  cursor: pointer;
+  transition: background 0.17s;
+  box-shadow: 0 3px 12px rgba(37,99,235,0.08);
+}
+#popup-btn:hover {
+  background: #153e90;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh; width: 100vw;
+  background: rgba(36, 40, 51, 0.28);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.27s;
+}
+
+.popup-overlay.active {
+  display: flex;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 36px 40px 24px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(37,99,235,0.12);
+  text-align: center;
+  min-width: 270px;
+  animation: popupIn 0.33s cubic-bezier(.5,2,.6,1);
+}
+
+@keyframes popupIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.popup-content h2 {
+  margin-top: 0;
+  color: #198754;
+}
+
+.popup-content p {
+  color: #222;
+  margin-bottom: 23px;
+  font-size: 1.04em;
+}
+
+#close-btn {
+  padding: 9px 22px;
+  background: #e11d48;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.16s;
+}
+#close-btn:hover {
+  background: #ad1036;
+}
